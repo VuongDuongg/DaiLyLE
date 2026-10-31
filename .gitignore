@@ -1,0 +1,74 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.pyo
+__pycache__/
+*.swp
+.DS_Store
+Thumbs.db
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+scratch/
+*.tmp
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# IntelliJ / Android Studio related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code related
+.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.flutter-plugins
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication & Obfuscation related
+app.*.symbols
+app.*.map.json
+
+# Android Studio / Gradle artifacts
+/android/app/debug
+/android/app/profile
+/android/app/release
+/android/.gradle/
+.gradle/
+**/android/local.properties
+**/android/app/build/
+**/android/build/
+*.keystore
+*.jks
+
+# Python Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+.pytest_cache/
+
+# Supabase Local
+supabase/.temp/
+supabase/.branches/
+
+# Widget Preview related
+.widget_preview/
