@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../../../../core/constants/supabase_config.dart';
 import '../../../../core/constants/supabase_tables.dart';
 import '../../../../core/storage/progress_storage_service.dart';
 import '../../../pronunciation/domain/entities/assessment_result.dart';
@@ -13,6 +14,7 @@ class PracticeRepositoryImpl implements IPracticeRepository {
   PracticeRepositoryImpl({SupabaseClient? client}) : _client = client;
 
   SupabaseClient? get _supabase {
+    if (!SupabaseConfig.isConfigured) return null;
     if (_client != null) return _client;
     try {
       return Supabase.instance.client;

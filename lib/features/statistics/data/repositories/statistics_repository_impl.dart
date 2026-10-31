@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../../../../core/constants/supabase_config.dart';
 import '../../../../core/storage/progress_storage_service.dart';
 import '../../../practice/data/repositories/practice_repository_impl.dart';
 import '../../domain/entities/discipline_stats.dart';
@@ -12,6 +13,7 @@ class StatisticsRepositoryImpl implements IStatisticsRepository {
   StatisticsRepositoryImpl({SupabaseClient? client}) : _client = client;
 
   SupabaseClient? get _supabase {
+    if (!SupabaseConfig.isConfigured) return null;
     if (_client != null) return _client;
     try {
       return Supabase.instance.client;

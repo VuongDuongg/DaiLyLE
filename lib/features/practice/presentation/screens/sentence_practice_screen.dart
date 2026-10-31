@@ -136,8 +136,8 @@ class _SentencePracticeScreenState extends State<SentencePracticeScreen> {
         return;
       }
 
-      _transcriptionService.start();
       await _recorderService.startRecording();
+      _transcriptionService.start();
       setState(() {
         _isRecording = true;
         _recognizedSpokenText = null;
