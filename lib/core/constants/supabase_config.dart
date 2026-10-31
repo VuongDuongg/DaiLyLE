@@ -1,17 +1,16 @@
 class SupabaseConfig {
   SupabaseConfig._();
 
-  // Replace with your real Supabase Project URL & Anon Key from:
-  // Supabase Dashboard -> Project Settings -> API
+  // Real Supabase Project URL & Anon Key for Dailyle
   static const String supabaseUrl = String.fromEnvironment(
     'SUPABASE_URL',
-    defaultValue: 'https://demo-dailyle.supabase.co',
+    defaultValue: 'https://bagyfwoxfzubqlaqmufn.supabase.co',
   );
 
   static const String supabaseAnonKey = String.fromEnvironment(
     'SUPABASE_ANON_KEY',
     defaultValue:
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRlbW8tZGFpbHlsZSIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzAwMDAwMDAwLCJleHAiOjIwMDAwMDAwMDB9.signature_placeholder',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJhZ3lmd294Znp1YnFsYXFtdWZuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM0Mjc0MDAsImV4cCI6MjEwOTAwMzQwMH0.yfRe4-768J_n7oEMovkQ2jm90SvRxck8-tnuwxv7aBk',
   );
 
   /// Check whether Supabase is configured with real credentials or running in local mock/offline mode
